@@ -6,13 +6,8 @@ func Initialize() {
 	// Initialize routes with default configuration
 	r := gin.Default()
 
-	// Set a GET route
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
+	initializeRoutes(r)
 
-	// Start the api
+	// Run ther server
 	r.Run(":8080") // listen and serve on 0.0.0.0:8080
 }
