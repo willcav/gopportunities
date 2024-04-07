@@ -1,12 +1,7 @@
 package main
 
-import (
-	"fmt"
-
-	"github.com/gin-gonic/gin"
-)
+import "github.com/willcav/gopportunities/router"
 
 func main() {
-	r := gin.Default()
-	fmt.Print(r)
+	router.Initialize()
 }
